@@ -19,6 +19,8 @@
     "laravel/tinker": "~1.0"
   },
   "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.1",
+    "barryvdh/laravel-ide-helper": "^2.4",
     "fzaninotto/faker": "~1.4",
     "mockery/mockery": "0.9.*",
     "symfony/event-dispatcher": "~3.0",
@@ -49,6 +51,8 @@
     ],
     "post-install-cmd": [
       "Illuminate\\Foundation\\ComposerScripts::postInstall",
+      "php artisan ide-helper:generate",
+      "php artisan ide-helper:meta",
       "php artisan optimize"
     ],
     "post-update-cmd": [
